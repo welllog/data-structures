@@ -6,8 +6,8 @@ func assertIteratorImplementation() {
     var _ containers.ReverseIteratorWithIndex = (*Iterator)(nil)
 }
 
-func (l *List) Iterator() *Iterator {
-    return &Iterator{
+func (l *List) Iterator() Iterator {
+    return Iterator{
         list:    l,
         index: -1,
     }
